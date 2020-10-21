@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <h3>Featured Articles</h3>
+            <div 
+            class="list-group-item"
+            *ngFor="let farticle of featuredArray">
+                <a [href]="farticle.url" class="pull-left">
+                    <h4 class="list-group-item-heading"><u>{{farticle.title}}</u></h4>
+                    <img [src]="farticle.featureImgUrl" alt="Featured Photos" height="50px">
+                </a>
+            </div>
+        </ul>
+    </div>
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <h3>Normal Articles</h3>
+            <div 
+            class="list-group-item"
+            *ngFor="let narticle of normalArray">
+                <a [href]="narticle.url" class="pull-left">
+                    <h4 class="list-group-item-heading"><u>{{narticle.title}}</u></h4>    
+                </a>
+                <div [innerHTML]="narticle.description"></div>
+            </div>
+        </ul>
+    </div>
+</div>
